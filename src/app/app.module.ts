@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, XHRBackend, RequestOptions } from '@angular/http';
 
 import { Router } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,11 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
 import { DiamondsService } from './diamonds.service';
+import { HttpInterceptor } from './interceptor.service';
 
+export function HttpInterceptorFactory(backend: XHRBackend, defaultOptions: RequestOptions) {
+    return new HttpInterceptor(backend, defaultOptions);
+};
 
 @NgModule({
   declarations: [
@@ -30,7 +34,12 @@ import { DiamondsService } from './diamonds.service';
     HttpModule
   ],
   providers: [
-    DiamondsService
+    DiamondsService,
+    {
+      provide: HttpInterceptor,
+      useFactory: HttpInterceptorFactory,
+      deps: [ XHRBackend, RequestOptions]
+    }
   ],
   bootstrap: [
     AppComponent

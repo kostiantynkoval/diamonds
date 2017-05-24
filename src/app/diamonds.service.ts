@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Diamond } from './diamond';
 import { DIAMONDS } from './diamonds-mock';
+import { HttpInterceptor } from './interceptor.service';
 
 @Injectable()
 export class DiamondsService {

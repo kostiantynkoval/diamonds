@@ -1,6 +1,7 @@
 import { Component }   from '@angular/core';
 import { Router }      from '@angular/router';
 import { AuthService } from './auth.service';
+
 @Component({
   templateUrl: './login.component.html',
     styleUrls: ['./login.component.css']
@@ -17,7 +18,7 @@ export class LoginComponent {
     this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
   }
   login() {
-    this.message = 'Trying to log in ...';
+    this.message = 'Logging in ...';
     this.authService.login(this.email, this.password)
       .subscribe(() => {
         // this.setMessage();
