@@ -1,0 +1,51 @@
+<main>
+  <section class="navSection">
+      <h1>
+        <img src="../assets/img/MAIN-SCREEN.png" alt="logo">
+      </h1>
+      <div class="navPanel">
+          <ul class="nav-top">
+            <li><a routerLink="/diamonds">My Diamonds</a></li>
+            <li><a>New Image</a></li>
+          </ul>
+          <ul class="image-list">
+                <li><div><span>lot id</span><span>2345</span></div></li>
+                <li><div><span>size</span><span></span></div></li>
+                <li><div><span>color</span><span></span></div></li>
+                <li><div><span>clarity</span><span></span></div></li>
+                <li><div><span>cut</span><span></span></div></li>
+                <li><div><span>polish</span><span>5432</span></div></li>
+                <li><div><span>sym</span><span>45</span></div></li>
+                <li><div><span>fluo</span><span>wert34</span></div></li>
+                <li><div><span>cert</span><span>tre43re r</span></div></li>
+                <li><div><span>cert num #</span><span>rte34</span></div></li>
+                <li><div><span>n</span><span>35</span></div></li>
+                <button>start</button>
+          </ul>
+      </div>
+  </section>
+  <section class="diamondsSection" *ngIf="diamond">
+    <div class="top-view">
+      <div><span>focal stack image: {{diamond.id}}</span></div>
+      <img src="../assets/img/MAIN-SCREEN-Recovered.png" alt="">
+    </div>
+    <div class="bottom-view">
+      <div>
+        <img src="../assets/img/MAIN-SCREEN-Recovered.png" alt="">
+        <div><span>marketing</span></div>
+      </div>
+      <div>
+        <img src="../assets/img/MAIN-SCREEN-Recovered.png" alt="">
+        <div><span>black bcgd: {{diamond.name}}</span></div>
+      </div>
+      <div>
+        <img src="../assets/img/MAIN-SCREEN-Recovered.png" alt="">
+        <div><span>top view</span></div>
+      </div>
+      <div>
+        <img src="../assets/img/MAIN-SCREEN-Recovered.png" alt="">
+        <div><span>bottom view</span></div>
+      </div>
+    </div>
+  </section>
+</main>

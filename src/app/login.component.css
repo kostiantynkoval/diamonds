@@ -1,0 +1,54 @@
+section{
+  margin: 0 auto;
+  width: 300px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+h1, h2{
+  text-align: center;
+}
+section form{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+section form *:not(button){
+  flex: 1 100%;
+  padding: 5px 10px;
+}
+section form input{
+  border-radius: 3px;
+  font-size: 1rem;
+  font-family: Arial, Verdana, 'sans-serif';
+}
+section form button{
+  width: 140px;
+  background-color: #24156b;
+  color: #eee;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-top: 10px;
+}
+section form button:hover{
+  background-color: #13045a;
+}
+section form button:active{
+  background-color: #02045a;
+}

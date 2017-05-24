@@ -1,0 +1,90 @@
+section.navSection{
+  box-shadow: 5px 0px 20px #888888;
+  width: 100%;
+  background-color: #747474;
+}
+
+section.navSection ul.nav-top>li{
+  position: relative;
+  display: block;
+  width: 100%;
+  /*height: 20px;*/
+  padding: 15px 10px;
+  box-sizing: border-box;
+  text-align: right;
+  background-color: #333b3f;
+}
+section.navSection ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+section.navSection a,section.navSection span{
+  text-transform: uppercase;
+  font-family: Arial, Verdana, 'sans-serif';
+}
+section.navSection a{
+  text-decoration: none;
+  color: #fff;
+}
+section.navSection ul.image-list{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+section.navSection ul.image-list li div{
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+section.navSection ul.image-list li span:first-child{
+  display: block;
+  flex: 1 50px;
+  text-align: right;
+  color: #fff;
+  padding: 5px 10px 5px 5px;
+}
+section.navSection ul.image-list li span:last-child{
+  display: block;
+  flex: 1 50px;
+  background-color: #fff;
+  padding: 5px 5px 5px 10px;
+}
+section.navSection ul.image-list button{
+  width: 150px;
+  align-self: center;
+  background-color: #24156b;
+  color: #eee;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+section.navSection ul.image-list button:hover{
+  background-color: #13045a;
+}
+section.navSection ul.image-list button:active{
+  background-color: #02045a;
+}

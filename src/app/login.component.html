@@ -1,0 +1,14 @@
+<section>
+  <h1>
+      <img src="../assets/img/MAIN-SCREEN.png" alt="logo">
+  </h1>
+  <h2>LOGIN</h2>
+  <p>{{message}}</p>
+  <form>
+    <label for="login">Username:</label>
+    <input id="login" type="text" [(ngModel)]="email" name="login"/>
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password"/>
+    <button (click)="login()">Login</button>
+  </form>
+</section>

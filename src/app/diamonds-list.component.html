@@ -1,0 +1,23 @@
+<main>
+    <section class="navSection">
+        <h1>
+          <img src="../assets/img/MAIN-SCREEN.png" alt="logo">
+        </h1>
+        <div class="navPanel">
+            <ul class="nav-top">
+              <li><a routerLink="/diamonds">My Diamonds</a></li>
+              <li><a>New Image</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="diamondsSection">
+        <ul class="diamondsList">
+          <li *ngFor="let diamond of diamonds" (click)="onSelect(diamond)">
+            <a [routerLink]="['/diamond', diamond.id]">
+              <img src="{{diamond.src}}" alt="diamond">
+            </a>
+          </li>
+        </ul>
+    </section>
+</main>
+

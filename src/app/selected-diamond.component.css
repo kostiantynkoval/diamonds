@@ -1,0 +1,193 @@
+/*@font-face {
+        font-family: Bradley Hand;
+        src: url(../assets/fonts/bradley-hand-itc-bold-5923fc4aefdb4.ttf);
+}*/
+main{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+/*******NAV SECTION***********/
+h1{
+  text-align: center;
+}
+div.navPanel{
+  display: block;
+  box-shadow: 5px 0px 20px #888888;
+  background-color: #747474;
+  width: 300px;
+  height: 684px;
+}
+
+div.navPanel ul.nav-top>li{
+  position: relative;
+  display: block;
+  width: 100%;
+  /*height: 20px;*/
+  padding: 15px 10px;
+  box-sizing: border-box;
+  text-align: right;
+  background-color: #333b3f;
+}
+div.navPanel ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+div.navPanel a,div.navPanel span{
+  text-transform: uppercase;
+  font-family: Arial, Verdana, 'sans-serif';
+}
+div.navPanel a{
+  text-decoration: none;
+  color: #fff;
+}
+div.navPanel ul.nav-top li:first-child:hover{
+  background-color: #13045a;
+}
+div.navPanel ul.nav-top li:last-child{
+  background-color: #24156b;
+}
+div.navPanel ul.image-list{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+div.navPanel ul.image-list li div{
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+div.navPanel ul.image-list li span:first-child{
+  display: block;
+  flex: 1 50px;
+  text-align: right;
+  color: #fff;
+  padding: 5px 10px 5px 5px;
+}
+div.navPanel ul.image-list li span:last-child{
+  display: block;
+  flex: 1 50px;
+  background-color: #fff;
+  padding: 5px 5px 5px 10px;
+}
+div.navPanel ul.image-list button{
+  width: 150px;
+  align-self: center;
+  background-color: #24156b;
+  color: #eee;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+div.navPanel ul.image-list button:hover{
+  background-color: #13045a;
+}
+div.navPanel ul.image-list button:active{
+  background-color: #02045a;
+}
+
+
+/************************/
+
+
+section.diamondsSection{
+  position: relative;
+  /*margin: 0 auto;*/
+  margin-left: 200px;
+  width: 500px;
+  /*max-width: 900px;*/
+  height: 700px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -ms-align-items: center;
+  align-items: center;
+}
+section.diamondsSection>.top-view{
+  flex: 3;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+section.diamondsSection>.top-view img{
+  width: 300px;
+}
+section.diamondsSection>.top-view span{
+  font-size: 2rem;
+}
+section.diamondsSection>.bottom-view{
+  width: 100%;
+  flex: 1;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+section.diamondsSection>.bottom-view img{
+  width: 100px;
+}
+section.diamondsSection img+div{
+  text-align: center;
+}
+section.diamondsSection span{
+  font-family: 'Bradley Hand', Arial, Verdana, 'sans-serif';
+  color: #d40505;
+}
+
