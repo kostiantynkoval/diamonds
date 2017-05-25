@@ -27,7 +27,7 @@
   <section class="diamondsSection" *ngIf="diamond">
     <div class="top-view">
       <div><span>focal stack image: {{diamond.id}}</span></div>
-      <img src="../assets/img/MAIN-SCREEN-Recovered.png" alt="">
+      <img src="{{diamond.collection.compiled_img_url}}" alt="">
     </div>
     <div class="bottom-view">
       <div>
@@ -49,3 +49,4 @@
     </div>
   </section>
 </main>
+<button class="logout" (click)="logout()">Logout</button>

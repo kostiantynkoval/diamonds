@@ -53,7 +53,8 @@ div.navPanel ul.nav-top li:first-child{
 
 /*********** DIAMONDS SECTION ***********/
 section.diamondsSection{
-  display: block;
+  display: flex;
+  margin-top: 50px;
 }
 section.diamondsSection ul{
   position: relative;
@@ -77,4 +78,29 @@ section.diamondsSection ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+button.logout{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+button.logout{
+  width: 150px;
+  align-self: center;
+  background-color: #24156b;
+  color: #eee;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+button.logout:hover{
+  background-color: #13045a;
+}
+button.logout:active{
+  background-color: #02045a;
 }

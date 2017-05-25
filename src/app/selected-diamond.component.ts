@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
 import { Diamond } from './diamond';
 import { DiamondsService } from './diamonds.service';
+import { AuthService } from './auth.service';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -13,18 +14,27 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./selected-diamond.component.css']
 })
 export class SelectedDiamondComponent implements OnInit{
-  //@Input() diamond: Diamond;
+
   public diamond: Diamond;
   constructor(
       private diamondsService: DiamondsService,
       private route: ActivatedRoute,
-      private location: Location
+      private location: Location,
+      private authService: AuthService
     ) {}
 
   ngOnInit() {
     this.route.params
-      .switchMap((params: Params) => this.diamondsService.getDiamond(+params['id']))
-      .subscribe(diamond => this.diamond = diamond);
+      .switchMap((params: Params) => this.diamondsService.getDiamond(params['id']))
+      .subscribe(diamond => {
+        console.log(diamond);
+        this.diamond = diamond
+      });
+  }
+
+  logout(): void {
+    confirm('Are you sure?');
+    this.authService.logout();
   }
 
   // ngAfterViewChecked() {

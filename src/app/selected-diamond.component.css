@@ -99,7 +99,7 @@ div.navPanel ul.image-list li span:last-child{
   background-color: #fff;
   padding: 5px 5px 5px 10px;
 }
-div.navPanel ul.image-list button{
+div.navPanel ul.image-list button, button.logout{
   width: 150px;
   align-self: center;
   background-color: #24156b;
@@ -112,10 +112,10 @@ div.navPanel ul.image-list button{
   font-size: 1rem;
   margin-bottom: 10px;
 }
-div.navPanel ul.image-list button:hover{
+div.navPanel ul.image-list button:hover, button.logout:hover{
   background-color: #13045a;
 }
-div.navPanel ul.image-list button:active{
+div.navPanel ul.image-list button:active, button.logout:active{
   background-color: #02045a;
 }
 
@@ -191,3 +191,8 @@ section.diamondsSection span{
   color: #d40505;
 }
 
+button.logout{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

@@ -15,24 +15,25 @@ export class LoginComponent {
     this.setMessage();
   }
   setMessage() {
-    this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
+    this.message = 'Logged ' + (this.authService.isLoggedIn() ? 'in' : 'out');
   }
   login() {
     this.message = 'Logging in ...';
     this.authService.login(this.email, this.password)
-      .subscribe(() => {
-        // this.setMessage();
-        // if (this.authService.isLoggedIn) {
-        //   // Get the redirect URL from our auth service
-        //   // If no redirect has been set, use the default
-        //   let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/diamonds';
-        //   // Redirect the user
-        //   this.router.navigate([redirect]);
-        //}
+        .subscribe(
+          () => {
+              this.setMessage();
+              if (this.authService.isLoggedIn()) {
+              // Get the redirect URL from our auth service
+              // If no redirect has been set, use the default
+              let redirect = '/diamonds';
+              // Redirect the user
+              this.router.navigate([redirect]);
+              }
       });
   }
   logout() {
-    this.authService.logout();
     this.setMessage();
+    this.authService.logout();
   }
 }

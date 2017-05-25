@@ -12,12 +12,12 @@
     </section>
     <section class="diamondsSection">
         <ul class="diamondsList">
-          <li *ngFor="let diamond of diamonds" (click)="onSelect(diamond)">
-            <a [routerLink]="['/diamond', diamond.id]">
-              <img src="{{diamond.src}}" alt="diamond">
+          <li *ngFor="let diamond of diamonds">
+            <a [routerLink]="['/diamond', diamond._id]">
+              <img src="{{diamond.compiled_img_url}}" alt="diamond">
             </a>
           </li>
         </ul>
     </section>
 </main>
-
+<button class="logout" (click)="logout()">Logout</button>
